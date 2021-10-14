@@ -55,7 +55,7 @@ def create_student():
         abort(400)        
     jsonData = dict(request.json)
     student = {
-        'id': students[-1]['studentID'] + 1,
+        'studentID': students[-1]['studentID'] + 1,
         'name': jsonData.get('name', ''),
         'sex': jsonData.get('sex', ''),
         'height': jsonData.get('height', ''),
