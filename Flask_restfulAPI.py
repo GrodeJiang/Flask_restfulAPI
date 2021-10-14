@@ -54,7 +54,6 @@ def create_student():
     if not request.json or not 'name' in request.json:
         abort(400)        
     jsonData = dict(request.json)
-    print(jsonData)
     student = {
         'id': students[-1]['studentID'] + 1,
         'name': jsonData.get('name', ''),
