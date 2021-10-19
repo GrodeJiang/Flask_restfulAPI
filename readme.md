@@ -57,7 +57,7 @@
 ## 新增學生
 `/api/students/`   
 * Method : `POST`  
-*Data Params:
+* Data Params:
 ```
 {
     'name'  :  'Tim',
@@ -86,7 +86,7 @@
 `/api/students/ID`   
 * Method : PUT  
 * Required: ID<int>   
-*Data Params:
+* Data Params:
 ```
 {
     'name'  :  'John',
