@@ -16,7 +16,7 @@
 * Success Response:  
   * Code: 201  
   content:  
-  ```
+  ```python
   [{
     'ID' : 1,
     'name'  :  'John',
@@ -40,7 +40,7 @@
 * Success Response:  
   * Code: 201  
   content:  
-  ```
+  ```python
   {
     'ID' : 1,
     'name'  :  'John',
@@ -58,7 +58,7 @@
 `/api/students/`   
 * Method : `POST`  
 * Data Params:
-```
+```python
 {
     'name'  :  'Tim',
     'sex' : 'male',
@@ -69,7 +69,7 @@
 * Success Response:  
   * Code: 201  
   content:  
-  ```
+  ```python
   {
     'ID' : 10,
     'name'  :  'Tim',
@@ -87,7 +87,7 @@
 * Method : PUT  
 * Required: ID<int>   
 * Data Params:
-```
+```python
 {
     'name'  :  'John',
     'sex' : 'male',
@@ -98,7 +98,7 @@
 * Success Response:  
   * Code: 201  
   content:  
-  ```
+  ```python
   {
     'ID' : 1,
     'name'  :  'John',
@@ -122,7 +122,7 @@
 * Success Response:  
   * Code: 201  
   content:  
-  ```
+  ```python
   {'result': True}
   ```
 * Error Response:  
