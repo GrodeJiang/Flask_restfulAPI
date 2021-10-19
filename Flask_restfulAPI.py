@@ -53,7 +53,7 @@ def students_control():
             'weight': jsonData.get('weight', '')
         }
         students.append(student)
-        return jsonify({'student': student}), 201
+        return jsonify({'student': student}), 201        
 
 @app.route('/api/students/<int:ID>', methods = ['GET', 'PUT', 'DELETE'])
 def student_control(ID):
@@ -61,7 +61,7 @@ def student_control(ID):
         student = list(filter(lambda s : s['ID'] == ID, students))
         if len(student) == 0:
             abort(404)
-        return jsonify({'student': student[0]})
+        return jsonify({'student': student[0]}), 201
     elif request.method == 'PUT':
         student = list(filter(lambda s : s['ID'] == ID, students))
         if len(student) == 0:
@@ -81,13 +81,13 @@ def student_control(ID):
         student[0]['sex'] = jsonData.get('sex', students[ID]['sex'] )
         student[0]['height'] = jsonData.get('height', students[ID]['height'] )
         student[0]['weight'] = jsonData.get('weight', students[ID]['weight'] )
-        return jsonify({'student': student[0]})
+        return jsonify({'student': student[0]}), 201
     elif request.method == 'DELETE':
         student = list(filter(lambda s : s['ID'] == ID, students))
         if len(student) == 0:
             abort(404)
         students.remove(student[0])
-        return jsonify({'result': True})
+        return jsonify({'result': True}), 201
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', debug = True)
